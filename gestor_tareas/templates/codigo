@@ -1,0 +1,4 @@
+/gestor_tareas
+    app.py
+    /templates
+        index.html

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Tareas</title>
+</head>
+
+<body>
+<h1>Gestor de Tareas</h1>
+
+<ul>
+    {% for tarea in tareas %}
+    <li>
+        {% if tarea['hecho'] %}
+           <s>{{ tarea['texto'] }}</s>
+
+          {% else %}
+          {{ tarea['texto'] }} 
+          <a href="/completar/{{ tarea['id'] }}">[Completar]</a>
+        {% endif %}
+     </li>
+    {% endfor %}
+</ul>
+    
+<form action="/agregar" method="post">
+    <input type="text" name= "texto_tarea" placeholder="Nueva tarea" required>
+    <button type="submit">Agregar</button>>
+</form>
+</body>
+</html>
