@@ -110,9 +110,8 @@ def main():
     """
     Flujo principal del programa.
     """
-
-    carpeta_objetivo = Path (r"C:\Users\arkan\OneDrive\Escritorio\Labo\Python")
-    # carpeta_objetivo = Path.home() / "Downloads"  # modificar ruta a su gusto
+    
+    carpeta_objetivo = Path.home() / "Downloads"  # modificar ruta a su gusto
 
     if not carpeta_objetivo.exists():
         logging.error("La carpeta elegida no existe")
